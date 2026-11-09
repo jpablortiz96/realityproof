@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" font-family="Inter, 'Segoe UI', Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">RealityProof system architecture</title>
+  <desc id="desc">A React web app with an AG Studio dashboard and an external agent call one Fastify API. The API talks to PayPal Sandbox, the Gemini API and local storage: a JSON state file and private evidence images. One Docker image serves web and API, optionally behind Caddy for HTTPS.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#BEF264"/>
+    </marker>
+    <style>
+      .bg{fill:#0B1220}
+      .card{fill:#111A2E;stroke:#24324D;stroke-width:2}
+      .hot{fill:#111A2E;stroke:#BEF264;stroke-width:2.5}
+      .chip{fill:#18233B;stroke:#2B3A58;stroke-width:1.5}
+      .h{fill:#FFFFFF;font-weight:700;font-size:26px}
+      .h2{fill:#FFFFFF;font-weight:700;font-size:20px}
+      .k{fill:#BEF264;font-weight:700;font-size:14px;letter-spacing:2px}
+      .t{fill:#CBD5E1;font-size:16px}
+      .s{fill:#94A3B8;font-size:14px}
+      .c{fill:#E2E8F0;font-size:15px;font-weight:600}
+      .edge{stroke:#BEF264;stroke-width:2.5;fill:none}
+      .lbl{fill:#BEF264;font-size:13px;font-weight:600}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="960"/>
+  <text x="60" y="70" class="k">REALITYPROOF · SYSTEM ARCHITECTURE</text>
+  <text x="60" y="110" class="h" font-size="34">One API in front of PayPal, Gemini and the evidence store</text>
+
+  <!-- Clients -->
+  <rect x="60" y="170" width="380" height="330" rx="18" class="card"/>
+  <text x="84" y="208" class="k">BROWSER</text>
+  <text x="84" y="242" class="h2">React 19 web app</text>
+  <text x="84" y="268" class="s">Vite · Tailwind · served by the API</text>
+  <rect x="84" y="290" width="332" height="40" rx="10" class="chip"/>
+  <text x="100" y="316" class="c">Requester · Verifier · Operator · Judge</text>
+  <rect x="84" y="342" width="332" height="66" rx="10" class="chip"/>
+  <text x="100" y="368" class="c">AG Studio 3.1 dashboard</text>
+  <text x="100" y="392" class="s">4 custom widgets · agent harness (in browser)</text>
+  <text x="84" y="440" class="t">The agent's model calls go</text>
+  <text x="84" y="464" class="t">through the API, never direct.</text>
+
+  <rect x="60" y="530" width="380" height="120" rx="18" class="card"/>
+  <text x="84" y="568" class="k">EXTERNAL AGENT</text>
+  <text x="84" y="600" class="h2">Any REST client</text>
+  <text x="84" y="626" class="s">Own role token · same rules as the UI</text>
+
+  <!-- API -->
+  <rect x="540" y="170" width="520" height="560" rx="18" class="hot"/>
+  <text x="566" y="208" class="k">SERVER · apps/api</text>
+  <text x="566" y="242" class="h2">Fastify 5 API on Node.js 24</text>
+  <text x="566" y="268" class="s">Role tokens · task-level authorization · Zod validation</text>
+  <g>
+    <rect x="566" y="292" width="226" height="88" rx="10" class="chip"/>
+    <text x="582" y="320" class="c">PayPal module</text>
+    <text x="582" y="344" class="s">Orders v2 · Payouts v1</text>
+    <text x="582" y="366" class="s">webhook signature check</text>
+
+    <rect x="808" y="292" width="226" height="88" rx="10" class="chip"/>
+    <text x="824" y="320" class="c">AI module</text>
+    <text x="824" y="344" class="s">image analysis · agent turn</text>
+    <text x="824" y="366" class="s">tool allowlist · daily budgets</text>
+
+    <rect x="566" y="394" width="226" height="88" rx="10" class="chip"/>
+    <text x="582" y="422" class="c">Evidence module</text>
+    <text x="582" y="446" class="s">type, size, SHA-256</text>
+    <text x="582" y="468" class="s">duplicates · required views</text>
+
+    <rect x="808" y="394" width="226" height="88" rx="10" class="chip"/>
+    <text x="824" y="422" class="c">Proofs module</text>
+    <text x="824" y="446" class="s">Proof Passport · hashes</text>
+    <text x="824" y="468" class="s">HMAC-signed read URLs</text>
+
+    <rect x="566" y="496" width="226" height="88" rx="10" class="chip"/>
+    <text x="582" y="524" class="c">Permissions</text>
+    <text x="582" y="548" class="s">roles · separation of duties</text>
+    <text x="582" y="570" class="s">object-level access</text>
+
+    <rect x="808" y="496" width="226" height="88" rx="10" class="chip"/>
+    <text x="824" y="524" class="c">Audit log</text>
+    <text x="824" y="548" class="s">decisions, uploads, AI calls,</text>
+    <text x="824" y="570" class="s">stripped agent tools</text>
+  </g>
+  <rect x="566" y="604" width="468" height="100" rx="10" fill="#1A2A12" stroke="#BEF264" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="582" y="634" class="c" fill="#BEF264">Guardrails</text>
+  <text x="582" y="660" class="s">PUBLIC_DEMO_MODE (read-only on the server) · rate limits</text>
+  <text x="582" y="684" class="s">security headers and CSP · sanitized errors · Sandbox-only host</text>
+
+  <!-- Shared contracts -->
+  <rect x="60" y="680" width="380" height="80" rx="18" class="card"/>
+  <text x="84" y="714" class="c">packages/shared</text>
+  <text x="84" y="740" class="s">Zod contracts used by web and API</text>
+
+  <!-- External services -->
+  <rect x="1160" y="170" width="380" height="190" rx="18" class="card"/>
+  <text x="1184" y="208" class="k">PAYPAL SANDBOX REST</text>
+  <text x="1184" y="244" class="t">Orders v2: create · get · capture</text>
+  <text x="1184" y="272" class="t">Payouts v1: status lookup;</text>
+  <text x="1184" y="296" class="t">create only on explicit operator opt-in</text>
+  <text x="1184" y="324" class="t">Webhook signature verification</text>
+  <text x="1184" y="348" class="s">OAuth2 client credentials, server only</text>
+
+  <rect x="1160" y="390" width="380" height="150" rx="18" class="card"/>
+  <text x="1184" y="428" class="k">GOOGLE GEMINI API</text>
+  <text x="1184" y="464" class="t">@google/genai, server only</text>
+  <text x="1184" y="492" class="t">Multimodal image analysis</text>
+  <text x="1184" y="520" class="t">Function calling for the agent</text>
+
+  <rect x="1160" y="570" width="380" height="160" rx="18" class="card"/>
+  <text x="1184" y="608" class="k">STORAGE (SERVER DISK)</text>
+  <text x="1184" y="644" class="t">One JSON state file</text>
+  <text x="1184" y="668" class="s">atomic write + fsync; unreadable → quarantined</text>
+  <text x="1184" y="700" class="t">Private evidence images</text>
+
+  <!-- Edges -->
+  <path class="edge" d="M440 330 H540" marker-end="url(#arrow)"/>
+  <text x="452" y="318" class="lbl">HTTPS JSON</text>
+  <path class="edge" d="M440 590 H490 V520 H540" marker-end="url(#arrow)"/>
+  <text x="452" y="578" class="lbl">REST</text>
+  <path class="edge" d="M1060 265 H1160" marker-end="url(#arrow)"/>
+  <path class="edge" d="M1060 465 H1160" marker-end="url(#arrow)"/>
+  <path class="edge" d="M1060 650 H1160" marker-end="url(#arrow)"/>
+  <path class="edge" d="M250 650 V680" stroke-dasharray="6 6"/>
+
+  <!-- Deployment band -->
+  <rect x="60" y="800" width="1480" height="110" rx="18" fill="#0F1830" stroke="#24324D" stroke-width="2"/>
+  <text x="84" y="838" class="k">DEPLOYMENT</text>
+  <text x="84" y="874" class="t">One hardened Docker image serves the web app and the API · Compose profiles: demo (read-only), full (local workflow), https (Caddy + Let's Encrypt)</text>
+</svg>

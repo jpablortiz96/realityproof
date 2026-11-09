@@ -1,0 +1,15 @@
+[
+ {"id":"problem","text":"AI agents can compare prices and start payments. But no API can tell them whether the right part is really on the shelf. For a critical part, one wrong purchase can cost far more than checking first."},
+ {"id":"contract","text":"RealityProof lets a buyer or an agent pay for evidence first. A contract states what must be shown and what being wrong would cost. With a declared risk assumption, it works out whether the check is worth its fee."},
+ {"id":"paypal","text":"PayPal Sandbox funds the check. This is a real Sandbox capture of fourteen dollars in test money, confirmed with PayPal and bound to a single contract. It is a recorded example. No new payment is made in this video."},
+ {"id":"fund","text":"For this walkthrough we use a fictional part and synthetic funding, clearly labeled. No money moves, and it can never trigger a payout."},
+ {"id":"verifier","text":"A verifier gets a precise checklist of three views. The server checks each file, hashes it, and rejects duplicates. These are generated test images. No physical inspection takes place here."},
+ {"id":"gemini","text":"Now a live Gemini call. It reports what it can see in the pixels, and what it cannot establish. This is advice, not a verdict."},
+ {"id":"human","text":"A person decides. The operator cannot be the one who requested the check or submitted the evidence. The AI cannot approve anything."},
+ {"id":"passport","text":"The Proof Passport records the hashes, the funding provenance, and the human decision. It also states what it cannot prove. A matching label and an intact hash do not mean the part is authentic."},
+ {"id":"studio_a","text":"Across all cases, AG Studio shows the economics, the coverage, and the money trail in four custom widgets. Ask the agent which cases still need evidence, and Gemini picks the tool that filters the dashboard."},
+ {"id":"studio_c","text":"Separate real from synthetic money, and they never mix. Here is the only real capture. Its eleven dollar payout is unclaimed, so it shows as not received."},
+ {"id":"studio_d","text":"Ask for a comparison, and a real AG Studio chart appears. The agent is read-only by construction. It has no tool that can reach a payment or a decision."},
+ {"id":"studio_e","text":"It can also focus the case waiting for a person, but the decision stays with that person."},
+ {"id":"close","text":"RealityProof. Proof before payment. It is open source, and you can run the demo with one command."}
+]

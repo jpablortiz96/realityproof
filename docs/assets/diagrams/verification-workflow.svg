@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" font-family="Inter, 'Segoe UI', Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">RealityProof verification workflow</title>
+  <desc id="desc">Six steps: decide if a check is worth it, fund it through PayPal Sandbox, collect required photos, get advisory observations from Gemini, a human operator decides, and a Proof Passport records the result and its limits.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#BEF264"/></marker>
+    <style>
+      .card{fill:#111A2E;stroke:#24324D;stroke-width:2}
+      .human{fill:#111A2E;stroke:#BEF264;stroke-width:2.5}
+      .n{fill:#BEF264;font-weight:800;font-size:44px}
+      .h{fill:#FFFFFF;font-weight:700;font-size:24px}
+      .who{fill:#BEF264;font-weight:700;font-size:13px;letter-spacing:1.5px}
+      .t{fill:#CBD5E1;font-size:15px}
+      .k{fill:#BEF264;font-weight:700;font-size:14px;letter-spacing:2px}
+      .edge{stroke:#BEF264;stroke-width:2.5;fill:none}
+    </style>
+  </defs>
+  <rect width="1600" height="720" fill="#0B1220"/>
+  <text x="60" y="70" class="k">REALITYPROOF · VERIFICATION WORKFLOW</text>
+  <text x="60" y="112" fill="#FFFFFF" font-weight="700" font-size="34">From a payment to a record that states its own limits</text>
+
+  <g transform="translate(60,170)">
+    <rect width="230" height="330" rx="18" class="card"/>
+    <text x="22" y="62" class="n">1</text><text x="22" y="104" class="h">Decide</text>
+    <text x="22" y="130" class="who">REQUESTER</text>
+    <text x="22" y="170" class="t">Part, expected SKU,</text>
+    <text x="22" y="192" class="t">required photo views.</text>
+    <text x="22" y="226" class="t">Value of Information:</text>
+    <text x="22" y="248" class="t" font-family="'JetBrains Mono', Consolas, monospace">(p × L) − C</text>
+    <text x="22" y="282" class="t">p is a declared</text>
+    <text x="22" y="304" class="t">assumption.</text>
+  </g>
+  <g transform="translate(316,170)">
+    <rect width="230" height="330" rx="18" class="card"/>
+    <text x="22" y="62" class="n">2</text><text x="22" y="104" class="h">Fund</text>
+    <text x="22" y="130" class="who">PAYPAL SANDBOX</text>
+    <text x="22" y="170" class="t">Orders v2 takes the</text>
+    <text x="22" y="192" class="t">fee in test money.</text>
+    <text x="22" y="226" class="t">The server confirms</text>
+    <text x="22" y="248" class="t">the capture with PayPal</text>
+    <text x="22" y="270" class="t">and binds it to one</text>
+    <text x="22" y="292" class="t">contract.</text>
+  </g>
+  <g transform="translate(572,170)">
+    <rect width="230" height="330" rx="18" class="card"/>
+    <text x="22" y="62" class="n">3</text><text x="22" y="104" class="h">Collect</text>
+    <text x="22" y="130" class="who">VERIFIER</text>
+    <text x="22" y="170" class="t">Guided checklist,</text>
+    <text x="22" y="192" class="t">one photo per view.</text>
+    <text x="22" y="226" class="t">Server checks type,</text>
+    <text x="22" y="248" class="t">size, SHA-256,</text>
+    <text x="22" y="270" class="t">duplicates and</text>
+    <text x="22" y="292" class="t">missing views.</text>
+  </g>
+  <g transform="translate(828,170)">
+    <rect width="230" height="330" rx="18" class="card"/>
+    <text x="22" y="62" class="n">4</text><text x="22" y="104" class="h">Analyze</text>
+    <text x="22" y="130" class="who">GEMINI · ADVISORY</text>
+    <text x="22" y="170" class="t">Reports what it sees</text>
+    <text x="22" y="192" class="t">and what it can't</text>
+    <text x="22" y="214" class="t">establish.</text>
+    <text x="22" y="248" class="t">May answer</text>
+    <text x="22" y="270" class="t" font-family="'JetBrains Mono', Consolas, monospace" font-size="13">INSUFFICIENT_EVIDENCE</text>
+    <text x="22" y="292" class="t">and ask for more.</text>
+  </g>
+  <g transform="translate(1084,170)">
+    <rect width="230" height="330" rx="18" class="human"/>
+    <text x="22" y="62" class="n">5</text><text x="22" y="104" class="h">Decide</text>
+    <text x="22" y="130" class="who">HUMAN OPERATOR</text>
+    <text x="22" y="170" class="t">Neither requester</text>
+    <text x="22" y="192" class="t">nor verifier.</text>
+    <text x="22" y="226" class="t">Approves, rejects or</text>
+    <text x="22" y="248" class="t">asks for evidence,</text>
+    <text x="22" y="270" class="t">with a written</text>
+    <text x="22" y="292" class="t">justification.</text>
+  </g>
+  <g transform="translate(1340,170)">
+    <rect width="200" height="330" rx="18" class="card"/>
+    <text x="22" y="62" class="n">6</text><text x="22" y="104" class="h">Record</text>
+    <text x="22" y="130" class="who">PROOF PASSPORT</text>
+    <text x="22" y="170" class="t">Provenance,</text>
+    <text x="22" y="192" class="t">views checked,</text>
+    <text x="22" y="214" class="t">SHA-256 manifest.</text>
+    <text x="22" y="248" class="t">States what it</text>
+    <text x="22" y="270" class="t">could not verify.</text>
+  </g>
+
+  <path class="edge" d="M290 335 H316" marker-end="url(#a)"/>
+  <path class="edge" d="M546 335 H572" marker-end="url(#a)"/>
+  <path class="edge" d="M802 335 H828" marker-end="url(#a)"/>
+  <path class="edge" d="M1058 335 H1084" marker-end="url(#a)"/>
+  <path class="edge" d="M1314 335 H1340" marker-end="url(#a)"/>
+
+  <rect x="60" y="560" width="1480" height="100" rx="18" fill="#0F1830" stroke="#24324D" stroke-width="2"/>
+  <text x="90" y="604" fill="#FFFFFF" font-weight="700" font-size="20">An intact record is not a genuine part.</text>
+  <text x="90" y="634" class="t">A hash proves the record wasn't changed. Photos and AI observations don't certify physical authenticity, and no payout is ever automatic.</text>
+</svg>

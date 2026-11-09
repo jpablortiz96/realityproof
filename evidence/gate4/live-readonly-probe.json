@@ -1,0 +1,128 @@
+{
+  "probed_at": "2026-11-05T15:47:24.215Z",
+  "mode": "READ_ONLY",
+  "paypal": {
+    "credentials_present": true,
+    "base": "https://api-m.sandbox.paypal.com",
+    "webhook_id_present": false,
+    "oauth_status": 200,
+    "order": {
+      "http": 200,
+      "id": "4J744493RC470905K",
+      "status": "COMPLETED",
+      "intent": "CAPTURE",
+      "custom_id": "task_live_sbx_1793222660264",
+      "amount": {
+        "currency_code": "USD",
+        "value": "14.00"
+      },
+      "capture_id": "0TL320715J3450828",
+      "capture_status": "COMPLETED",
+      "capture_amount": {
+        "currency_code": "USD",
+        "value": "14.00"
+      },
+      "create_time": "2026-10-28T21:24:21Z"
+    },
+    "capture": {
+      "http": 200,
+      "id": "0TL320715J3450828",
+      "status": "COMPLETED",
+      "amount": {
+        "currency_code": "USD",
+        "value": "14.00"
+      },
+      "custom_id": "task_live_sbx_1793222660264",
+      "create_time": "2026-10-28T22:20:54Z"
+    },
+    "batches": {
+      "VNMEQ8SMKZLUQ": {
+        "http": 200,
+        "batch_status": "SUCCESS",
+        "amount": {
+          "currency": "USD",
+          "value": "11.20"
+        },
+        "time_created": "2026-10-28T21:24:25Z",
+        "sender_batch_id": "rp_payout_task_live_sbx_1793222660264",
+        "items": [
+          {
+            "payout_item_id": "DUU2P4Q7F3DRW",
+            "transaction_status": "UNCLAIMED",
+            "amount": {
+              "currency": "USD",
+              "value": "11.20"
+            },
+            "sender_item_id": "item_task_live_sbx_1793222660264",
+            "time_processed": "2026-10-28T21:24:40Z"
+          }
+        ]
+      },
+      "PQ2Z9K78X5R2C": {
+        "http": 404,
+        "error": "INVALID_RESOURCE_ID",
+        "items": []
+      }
+    },
+    "webhooks_registered": {
+      "http": 200,
+      "count": 0
+    }
+  },
+  "gemini": {
+    "key_present": true,
+    "env_model": "gemini-4-argon",
+    "env_fallback": "gemini-2.5-flash",
+    "list_http": 200,
+    "available_flash": [
+      "gemini-2.5-flash",
+      "gemini-2.5-pro",
+      "gemini-flash-latest",
+      "gemini-flash-lite-latest",
+      "gemini-pro-latest",
+      "gemini-2.5-flash-lite",
+      "gemini-3-flash-preview",
+      "gemini-3.1-pro-preview",
+      "gemini-3.1-pro-preview-customtools",
+      "gemini-3.1-flash-lite-preview",
+      "gemini-3.1-flash-lite",
+      "nano-banana-pro-preview",
+      "gemini-3.5-flash",
+      "gemini-3.5-flash-lite",
+      "gemini-omni-flash-preview",
+      "gemini-omni-1.1-flash",
+      "gemini-3.6-flash",
+      "gemini-3.7-flash",
+      "gemini-3.8-flash",
+      "lyria-3-pro-preview"
+    ],
+    "call": {
+      "gemini-4-argon": {
+        "http": 429,
+        "ms": 425,
+        "error": "RESOURCE_EXHAUSTED"
+      },
+      "gemini-2.5-flash": {
+        "http": 404,
+        "ms": 286,
+        "error": "NOT_FOUND"
+      },
+      "gemini-3.5-flash-lite": {
+        "http": 503,
+        "ms": 3741,
+        "error": "UNAVAILABLE"
+      },
+      "gemini-3.8-flash": {
+        "http": 503,
+        "ms": 6592,
+        "error": "UNAVAILABLE"
+      },
+      "gemini-3.5-flash": {
+        "http": 200,
+        "ms": 1876,
+        "model_version": "gemini-3.6-flash",
+        "finish": "MAX_TOKENS"
+      }
+    }
+  }
+}

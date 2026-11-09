@@ -1,0 +1,47 @@
+[
+ {
+  "name": "create request",
+  "ok": true,
+  "detail": "task_8f07cab5-7ae"
+ },
+ {
+  "name": "synthetic funding, not payable",
+  "ok": true,
+  "detail": "DEMO_SYNTHETIC"
+ },
+ {
+  "name": "verifier accepts",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "upload FRONT_PART",
+  "ok": true,
+  "detail": "74810d94b8e5"
+ },
+ {
+  "name": "upload SKU_LABEL_CLOSEUP",
+  "ok": true,
+  "detail": "2f83997ab518"
+ },
+ {
+  "name": "upload PACKAGING_BOX",
+  "ok": true,
+  "detail": "5b29d8011b62"
+ },
+ {
+  "name": "analysis without a key says so",
+  "ok": true,
+  "detail": "AI_BLOCKED"
+ },
+ {
+  "name": "human decision issues a passport",
+  "ok": true,
+  "detail": "proof_b6dcb987-19d"
+ },
+ {
+  "name": "no payout was attempted",
+  "ok": true,
+  "detail": ""
+ }
+]

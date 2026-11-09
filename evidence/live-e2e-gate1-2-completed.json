@@ -1,0 +1,145 @@
+{
+  "executed_at": "2026-10-28T22:20:59.095Z",
+  "gate_1_status": "PASS",
+  "task_id": "task_live_sbx_1793222660264",
+  "final_task_status": "PROOF_PASSPORT_ISSUED",
+  "financial_sequence": [
+    "ORDER_CREATED",
+    "BUYER_APPROVED",
+    "CAPTURE_COMPLETED",
+    "EVIDENCE_SUBMITTED",
+    "AI_ANALYZED",
+    "HUMAN_APPROVED",
+    "PAYOUT_ELIGIBLE"
+  ],
+  "payout_eligibility_proof": {
+    "task_id": "task_live_sbx_1793222660264",
+    "order_id": "4J744493RC470905K",
+    "buyer_approved": true,
+    "capture_id": "0TL320715J3450828",
+    "capture_status": "COMPLETED",
+    "captured_amount_usd": 14,
+    "evidence_submitted_count": 1,
+    "ai_analyzed": true,
+    "human_approved_by": "actor_operator_reviewer_01",
+    "human_approved_at": "2026-10-28T22:20:59.088Z",
+    "payout_eligible": true
+  },
+  "paypal_order_and_capture": {
+    "order_id": "4J744493RC470905K",
+    "pre_capture_remote_status": "APPROVED",
+    "payer_id": "9JA4ASWAD26DL",
+    "post_capture_remote_status": "COMPLETED",
+    "capture_id": "0TL320715J3450828",
+    "capture_status": "COMPLETED",
+    "amount_value": "14.00",
+    "currency_code": "USD",
+    "capture_duration_ms": 3872,
+    "duplicate_capture_test": {
+      "http_status": 200,
+      "returned_same_capture_id": true,
+      "duration_ms": 7
+    }
+  },
+  "evidence_artifact": {
+    "artifact_id": "art_89c176ef-c8d1-4b40-b401-bd923333dde1",
+    "sha256_hex": "22f73284b456b568c79bfd57369f4bdd1bb1f57a6e7fc66505b4ced36e8e0e0b",
+    "mime_type": "image/png",
+    "size_bytes": 4194
+  },
+  "gemini_live_analysis": {
+    "observed_sku": "BOSCH-0280158040",
+    "matches_expected": "MATCH",
+    "visible_evidence": [
+      "Text displaying 'DEMO SYNTHETIC SPARE PART'",
+      "SKU text 'BOSCH-0280158040' is clearly visible",
+      "Text stating 'OEM SEAL: INTACT 2-PIN EV14'",
+      "A barcode graphic is present at the bottom of the image"
+    ],
+    "unverifiable_claims": [
+      "Factory box seal is actually unbroken beyond what is printed on the label",
+      "Internal functional health of the fuel injector"
+    ],
+    "limitations": [
+      "A 2D photographic label cannot prove the internal component functional health",
+      "Cannot guarantee post-photo swap risk",
+      "Unverified physical location"
+    ],
+    "additional_evidence_needed": [
+      "Close-up of the actual physical seal on the box",
+      "Photo of the physical injector unit inside the packaging"
+    ],
+    "needs_human_review": true,
+    "safety_flags": [],
+    "confidence_level": "HIGH",
+    "confidence_note": "The SKU matches the expected SKU clearly in the provided label image.",
+    "recommended_decision": "PROCEED_TO_HUMAN_APPROVAL",
+    "model_id": "gemini-3.5-flash-lite",
+    "analyzed_at": "2026-10-28T22:20:59.078Z",
+    "wall_clock_duration_ms": 2066
+  },
+  "human_operator_review": {
+    "reviewer_id": "actor_operator_reviewer_01",
+    "decision": "APPROVE",
+    "rationale": "Live PayPal Sandbox capture verified ($14.00 USD COMPLETED), SKU label BOSCH-0280158040 confirmed via Gemini 3.5 Flash Lite and human visual inspection.",
+    "reviewed_at": "2026-10-28T22:20:59.084Z"
+  },
+  "proof_passport": {
+    "proof_id": "proof_67de385f-29d",
+    "task_id": "task_live_sbx_1793222660264",
+    "proof_schema_version": "0.1.0",
+    "status": "VERIFIED",
+    "source_type": "HUMAN_PHOTO_WITH_AI_AND_OPERATOR_REVIEW",
+    "captured_at": {
+      "value": "2026-10-28T22:20:57.000Z",
+      "verification_status": "DECLARED_BY_SUBMITTER_UNVERIFIED"
+    },
+    "received_at": "2026-10-28T22:20:57.009Z",
+    "evidence_hashes": [
+      {
+        "artifact_id": "art_89c176ef-c8d1-4b40-b401-bd923333dde1",
+        "view_type": "SKU_BARCODE_CLOSEUP",
+        "sha256_hex": "22f73284b456b568c79bfd57369f4bdd1bb1f57a6e7fc66505b4ced36e8e0e0b",
+        "mime_type": "image/png"
+      }
+    ],
+    "manifest_sha256": "9596ac3388fb55855190c8954338424365e8f5a1322d41291de5704666a405ac",
+    "observations": [
+      "Text displaying 'DEMO SYNTHETIC SPARE PART'",
+      "SKU text 'BOSCH-0280158040' is clearly visible",
+      "Text stating 'OEM SEAL: INTACT 2-PIN EV14'",
+      "A barcode graphic is present at the bottom of the image"
+    ],
+    "verifier_claims": {
+      "declared_sku": "BOSCH-0280158040",
+      "notes": "Live Sandbox E2E verification photo of Bosch Fuel Injector label BOSCH-0280158040.",
+      "separation_notice": "Submitted by human verifier; separated from pixel observations."
+    },
+    "unknowns": [
+      "Internal mechanical/electrical condition of the part cannot be determined from exterior photographs.",
+      "Physical custody between inspection timestamp and final shipment is unverified."
+    ],
+    "model_id": "gemini-3.5-flash-lite",
+    "reviewer_decision": {
+      "reviewer_id": "actor_operator_reviewer_01",
+      "decision": "APPROVE",
+      "rationale": "Live PayPal Sandbox capture verified ($14.00 USD COMPLETED), SKU label BOSCH-0280158040 confirmed via Gemini 3.5 Flash Lite and human visual inspection.",
+      "reviewed_at": "2026-10-28T22:20:59.084Z"
+    },
+    "valid_until": "2026-10-29T00:20:51.947Z",
+    "funding_order_id": "4J744493RC470905K",
+    "capture_id": "0TL320715J3450828",
+    "payout_batch_id": null,
+    "payout_status": "NOT_STARTED",
+    "scope_of_claim": "Visual inspection of submitted photographs against EvidenceContract v0 (BOSCH-0280158040) reviewed by human operator.",
+    "limitations": [
+      "A 2D photographic label cannot prove the internal component functional health",
+      "Cannot guarantee post-photo swap risk",
+      "Unverified physical location",
+      "SHA-256 hashes and server timestamps verify digital file integrity after upload, NOT physical authenticity or absence of pre-capture staging.",
+      "Does not guarantee seller ownership, internal component functionality, or post-inspection shipping integrity."
+    ],
+    "synthetic_label": "SANDBOX_LIVE_TEST",
+    "authorized_read_url": "http://localhost:4000/api/v1/proofs/proof_67de385f-29d?token=cHJvb2ZfNjdkZTM4NWYtMjlkLjIwMjYtMTAtMjlUMDA6MjA6NTEuOTQ3Wg.5ba8be81108672231ccf9b1e30f6e07effd64a5a63f7d3b77ef05d4eca42d0c9"
+  }
+}

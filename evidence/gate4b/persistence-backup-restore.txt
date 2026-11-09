@@ -1,0 +1,36 @@
+ Container realityproof-full-1 Started 
+task=task_2b248afd-3df
+demo-fund 200
+assign 200
+artifact=art_6f587826-8f0d-4781-9d48-033fd046639c
+--- before restart:
+found status=SUBMITTED artifacts=1 total=4
+ Container realityproof-full-1 Started 
+--- after restart:
+found status=SUBMITTED artifacts=1 total=4
+ Container realityproof-full-1 Started 
+--- after container recreate:
+found status=SUBMITTED artifacts=1 total=4
+preview bytes_source=ORIGINAL_ARTIFACT
+replayed same file after recreate -> 400 (expect 400)
+total 60
+drwxr-xr-x    2 node     node          4096 Nov  5 17:19 .
+drwxr-xr-x    3 node     node          4096 Nov  5 17:19 ..
+-rw-------    1 node     node         42156 Nov  5 17:19 realityproof-state.json
+-rw-------    1 node     node          4196 Nov  5 17:19 task_2b248afd-3df_art_6f587826-8f0d-4781-9d48-033fd046639c.png
+1000
+Backup verified: /d/realityproof/backups/realityproof-20261105T171955Z.tar.gz
+ Container realityproof-full-1 Stopped 
+volume entries after simulated loss: 0
+ Container realityproof-full-1 Started 
+--- after simulated data loss:
+MISSING total=3
+ Container realityproof-full-1 Stopped 
+Restored realityproof-20261105T171955Z.tar.gz into realityproof_realityproof_data. Start the service and check /ready.
+ Container realityproof-full-1 Started 
+--- after restore:
+found status=SUBMITTED artifacts=1 total=4
+preview bytes_source=ORIGINAL_ARTIFACT
+ Network realityproof_default Removed 
+realityproof_realityproof_data
+DONE

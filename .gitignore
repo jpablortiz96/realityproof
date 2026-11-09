@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+storage/private-evidence/*
+!storage/private-evidence/.gitkeep
+storage/state.json
+apps/api/storage/
+*.log
+.DS_Store
+coverage/
+.vite/
+backups/
+handoff/
+release-artifacts/

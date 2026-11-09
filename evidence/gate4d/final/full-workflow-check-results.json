@@ -1,0 +1,22 @@
+[
+ {
+  "name": "task survives restart",
+  "ok": true,
+  "detail": "PROOF_PASSPORT_ISSUED"
+ },
+ {
+  "name": "evidence survives restart",
+  "ok": true,
+  "detail": "3/3"
+ },
+ {
+  "name": "original image bytes after restart",
+  "ok": true,
+  "detail": "ORIGINAL_ARTIFACT"
+ },
+ {
+  "name": "passport readable after restart",
+  "ok": true,
+  "detail": "proof_b6dcb987-19d"
+ }
+]

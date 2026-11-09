@@ -1,0 +1,29 @@
+# Same as Caddyfile, but private: every path needs a preview cookie. Used while the AG Studio
+# licence for public use is pending, so HTTPS works without making the site public.
+# The app uses "Authorization: Bearer" for its role tokens, so HTTP basic auth can't be used here.
+# Opening https://<site>/__preview/<PREVIEW_TOKEN> once sets the cookie for 30 days.
+{$SITE_ADDRESS} {
+	encode zstd gzip
+	header Strict-Transport-Security "max-age=31536000"
+	request_body {
+		max_size 2MB
+	}
+
+	@unlock path /__preview/{$PREVIEW_TOKEN}
+	handle @unlock {
+		header Set-Cookie "rp_preview={$PREVIEW_TOKEN}; Path=/; Max-Age=2592000; Secure; HttpOnly; SameSite=Lax"
+		header Cache-Control "no-store"
+		redir * / 302
+	}
+
+	@allowed header_regexp preview Cookie (^|;\s*)rp_preview={$PREVIEW_TOKEN}(;|$)
+	handle @allowed {
+		reverse_proxy demo:4000
+	}
+
+	handle {
+		header Cache-Control "no-store"
+		header X-Robots-Tag "noindex, nofollow"
+		respond "RealityProof private preview. Access by invitation only." 403
+	}
+}

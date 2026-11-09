@@ -1,0 +1,11 @@
+# Private preview: only browsers holding the preview cookie reach the HTTPS demo.
+#   docker compose -f docker-compose.yml -f deploy/compose.private-preview.yml --profile https up -d
+# Needs PREVIEW_TOKEN in .env (letters and digits only, for example: openssl rand -hex 24).
+# Open https://<site>/__preview/<PREVIEW_TOKEN> once to get the cookie.
+# To go public once the AG Studio licence allows it, start without this file.
+services:
+  caddy:
+    environment:
+      PREVIEW_TOKEN: ${PREVIEW_TOKEN:?set PREVIEW_TOKEN}
+    volumes:
+      - ./deploy/Caddyfile.private-preview:/etc/caddy/Caddyfile:ro

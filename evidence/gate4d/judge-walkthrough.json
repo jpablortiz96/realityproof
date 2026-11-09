@@ -1,0 +1,74 @@
+{
+ "base": "http://localhost:8080",
+ "steps": [
+  {
+   "name": "frontend loads",
+   "ok": true,
+   "detail": "RealityProof — Proof before Payment"
+  },
+  {
+   "name": "public demo banner",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "REQUESTER navigation renders",
+   "ok": true,
+   "detail": "6/6"
+  },
+  {
+   "name": "VERIFIER navigation renders",
+   "ok": true,
+   "detail": "4/4"
+  },
+  {
+   "name": "OPERATOR navigation renders",
+   "ok": true,
+   "detail": "5/5"
+  },
+  {
+   "name": "JUDGE navigation renders",
+   "ok": true,
+   "detail": "3/3"
+  },
+  {
+   "name": "Proof Passport states its limit",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Proof Passport shows hash or digest",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "AG Studio renders 4 custom widgets",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "AG Studio chart and grid render",
+   "ok": true,
+   "detail": "canvas 1"
+  },
+  {
+   "name": "Query D adds a real chart without keys",
+   "ok": true,
+   "detail": "1->2"
+  },
+  {
+   "name": "the fallback is labeled",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no page errors",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "http_errors": [
+  "404 /api/v1/verification-requests/task_demo_pending_review_02/evidence/art_demo_pending_front_01/preview",
+  "404 /api/v1/verification-requests/task_live_sbx_1793222660264/evidence/art_89c176ef-c8d1-4b40-b401-bd923333dde1/preview"
+ ]
+}

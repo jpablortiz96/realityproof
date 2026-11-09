@@ -1,0 +1,26 @@
+{
+  "name": "realityproof",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RealityProof — Proof before Payment. Evidence-as-a-Service for AI agents and high-risk commerce powered by PayPal Sandbox and Google Gemini.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel -r run dev",
+    "build": "pnpm --filter @realityproof/shared build && pnpm --filter @realityproof/api build && pnpm --filter @realityproof/web build",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm --filter @realityproof/shared build && pnpm -r run test",
+    "seed": "pnpm --filter @realityproof/api run seed"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@types/node": "^22.10.2",
+    "playwright": "^1.64.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

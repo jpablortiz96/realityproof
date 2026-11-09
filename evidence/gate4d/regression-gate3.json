@@ -1,0 +1,134 @@
+{
+  "gate": "GATE_3_AG_STUDIO_3_0",
+  "executed_at": "2026-11-05T18:25:53.702Z",
+  "packages_verified": {
+    "ag-studio-react": "3.1.0",
+    "ag-studio": "3.1.0"
+  },
+  "zero_new_paypal_side_effects_verified": true,
+  "max_horizontal_overflow_px": 0,
+  "total_clipped_buttons": 0,
+  "total_axe_critical_or_serious": 0,
+  "demo_queries_verified": [
+    {
+      "queryId": "A",
+      "prompt": "Muéstrame las verificaciones que todavía necesitan evidencia.",
+      "responseSnippet": "### Consulta A · Verificaciones que todavía necesitan evidencia (2 de 3)\n• **`task_demo_part_040`** ([DEMO_SYNTHETIC] FictoParts KX-20 Fuel Injector — SKU FICTO-KX20-040 · SKU `FIC",
+      "verified": true
+    },
+    {
+      "queryId": "B",
+      "prompt": "¿Cuáles tienen mayor pérdida potencial estimada?",
+      "responseSnippet": "### Consulta B · Ranking por Pérdida Potencial Estimada y Valor de la Información (VoI)\n1. **`task_demo_pending_review_02`** ([DEMO_SYNTHETIC] FictoParts High-Pressure Rail Kit — S",
+      "verified": true
+    },
+    {
+      "queryId": "C",
+      "prompt": "Distingue las verificaciones financiadas mediante una captura real de PayPal Sandbox de las demostraciones sintéticas.",
+      "responseSnippet": "### Consulta C · Separación Estricta de Procedencia Financiera (PayPal Sandbox vs. Demo Sintético)\n1. **`REAL_SANDBOX_CAPTURE` (1 contrato · US$14.00 capturados reales):**\n   • **`",
+      "verified": true
+    },
+    {
+      "queryId": "D",
+      "prompt": "Construye un dashboard para comparar coste de verificación y pérdida esperada.",
+      "responseSnippet": "### Consulta D · Dashboard Comparativo: Coste de Verificación vs. Pérdida Esperada (`p × L`)\nHe añadido un gráfico construido por el motor de AG Studio a partir de las filas de ver",
+      "verified": true
+    },
+    {
+      "queryId": "E",
+      "prompt": "Abre el caso cuya revisión humana está pendiente.",
+      "responseSnippet": "### Consulta E · Caso con Revisión Humana Pendiente Seleccionado: `task_demo_pending_review_02`\n• **Artículo / SKU esperado:** [DEMO_SYNTHETIC] FictoParts High-Pressure Rail Kit — ",
+      "verified": true
+    }
+  ],
+  "layout_audits": [
+    {
+      "step": "01_intelligence_studio_desktop_en",
+      "viewport": "1440x900",
+      "lang": "EN",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    },
+    {
+      "step": "02_intelligence_studio_desktop_es",
+      "viewport": "1440x900",
+      "lang": "ES",
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    },
+    {
+      "step": "07_intelligence_studio_tablet_768",
+      "viewport": "768x1024",
+      "lang": "EN",
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    },
+    {
+      "step": "08_intelligence_studio_mobile_390",
+      "viewport": "390x844",
+      "lang": "EN",
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    },
+    {
+      "step": "08_intelligence_studio_mobile_360",
+      "viewport": "360x800",
+      "lang": "EN",
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    },
+    {
+      "step": "09_intelligence_studio_200pct_zoom",
+      "viewport": "720x600_200pct_zoom",
+      "lang": "EN",
+      "scrollWidth": 720,
+      "innerWidth": 720,
+      "horizontalOverflowPx": 0,
+      "clippedButtons": [],
+      "axeCritical": 0,
+      "axeSerious": 0,
+      "axeTotal": 0
+    }
+  ],
+  "screenshots": [
+    "01_intelligence_studio_1440_en.png",
+    "02_intelligence_studio_1440_es.png",
+    "03_demo_query_A_1440_es.png",
+    "03_demo_query_B_1440_es.png",
+    "03_demo_query_C_1440_es.png",
+    "03_demo_query_D_1440_es.png",
+    "03_demo_query_E_1440_es.png",
+    "04_adversarial_guardrail_blocked_1440_es.png",
+    "05_navigated_to_operator_decision_desk_1440_es.png",
+    "06_navigated_to_proof_passport_1440_es.png",
+    "07_intelligence_studio_768_en.png",
+    "08_intelligence_studio_390_en.png",
+    "08_intelligence_studio_360_en.png",
+    "09_intelligence_studio_200pct_zoom.png"
+  ]
+}

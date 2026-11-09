@@ -1,0 +1,6 @@
+# Shell scripts and container files run on Linux, even from a Windows checkout.
+*.sh text eol=lf
+Dockerfile text eol=lf
+deploy/Caddyfile text eol=lf
+deploy/Caddyfile.private-preview text eol=lf
+deploy/*.yml text eol=lf

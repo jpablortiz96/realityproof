@@ -1,0 +1,19 @@
+# Never send local state, secrets or private evidence to an image build
+.git
+.env
+.env.*
+!.env.example
+**/node_modules
+**/dist
+storage
+apps/api/storage
+backups
+docs
+**/*.md
+**/test
+**/run-gate*.ts
+evidence/*
+!evidence/live-e2e-gate1-2-completed.json
+!evidence/gemini-live-probe.json
+handoff
+*.log

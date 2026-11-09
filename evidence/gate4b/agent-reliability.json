@@ -1,0 +1,573 @@
+{
+ "executed_at": "2026-11-05T17:37:44.220Z",
+ "summary": {
+  "D": {
+   "runs": 10,
+   "ok": 10,
+   "avg_turns": 2,
+   "live_only": 10,
+   "median_ms": 5454
+  },
+  "A": {
+   "runs": 5,
+   "ok": 5,
+   "avg_turns": 2,
+   "live_only": 5,
+   "median_ms": 6761
+  },
+  "C": {
+   "runs": 5,
+   "ok": 5,
+   "avg_turns": 2,
+   "live_only": 5,
+   "median_ms": 4859
+  },
+  "E": {
+   "runs": 5,
+   "ok": 5,
+   "avg_turns": 2,
+   "live_only": 5,
+   "median_ms": 6082
+  },
+  "FREEFORM": {
+   "runs": 5,
+   "ok": 4,
+   "avg_turns": 11,
+   "live_only": 0,
+   "median_ms": 64646
+  }
+ },
+ "results": [
+  {
+   "label": "D",
+   "i": 0,
+   "ok": true,
+   "effect": true,
+   "ms": 14363,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have built a dashboard comparing verification cost against expected loss using the `COST"
+  },
+  {
+   "label": "D",
+   "i": 1,
+   "ok": true,
+   "effect": true,
+   "ms": 5286,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have created the dashboard comparing verification cost and expected loss (`@widget[agent"
+  },
+  {
+   "label": "D",
+   "i": 2,
+   "ok": true,
+   "effect": true,
+   "ms": 4964,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have added the **Verification Cost vs. Expected Loss** chart to your dashboard to compar"
+  },
+  {
+   "label": "D",
+   "i": 3,
+   "ok": true,
+   "effect": true,
+   "ms": 5454,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have built the dashboard comparing verification cost and expected loss (`@widget[agent_c"
+  },
+  {
+   "label": "D",
+   "i": 4,
+   "ok": true,
+   "effect": true,
+   "ms": 4713,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have added a comparison chart showing verification cost versus expected loss across the "
+  },
+  {
+   "label": "D",
+   "i": 5,
+   "ok": true,
+   "effect": true,
+   "ms": 7312,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have built a dashboard comparing verification cost versus expected loss across the verif"
+  },
+  {
+   "label": "D",
+   "i": 6,
+   "ok": true,
+   "effect": true,
+   "ms": 5447,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have added a chart comparing verification cost versus expected loss across the verificat"
+  },
+  {
+   "label": "D",
+   "i": 7,
+   "ok": true,
+   "effect": true,
+   "ms": 5560,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have successfully built and added the verification cost vs. expected loss comparison cha"
+  },
+  {
+   "label": "D",
+   "i": 8,
+   "ok": true,
+   "effect": true,
+   "ms": 4674,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have built a dashboard comparing verification cost and expected loss for your verificati"
+  },
+  {
+   "label": "D",
+   "i": 9,
+   "ok": true,
+   "effect": true,
+   "ms": 5646,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "add_evidence_chart"
+   ],
+   "errors": [],
+   "answer_head": "I have added the **Verification Cost vs. Expected Loss** chart to your dashboard. This com"
+  },
+  {
+   "label": "A",
+   "i": 0,
+   "ok": true,
+   "effect": true,
+   "ms": 16346,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "filter_intelligence_studio"
+   ],
+   "errors": [],
+   "answer_head": "Showing the verifications that still need evidence (`needs_evidence_flag` is true). \n\nTher"
+  },
+  {
+   "label": "A",
+   "i": 1,
+   "ok": true,
+   "effect": true,
+   "ms": 12042,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "filter_intelligence_studio"
+   ],
+   "errors": [],
+   "answer_head": "I have filtered the Intelligence Studio view to show the verifications that still need evi"
+  },
+  {
+   "label": "A",
+   "i": 2,
+   "ok": true,
+   "effect": true,
+   "ms": 6761,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "filter_intelligence_studio"
+   ],
+   "errors": [],
+   "answer_head": "Here are the verifications that still need evidence:\n\n1. **[DEMO_SYNTHETIC] Bosch EV14 Fue"
+  },
+  {
+   "label": "A",
+   "i": 3,
+   "ok": true,
+   "effect": true,
+   "ms": 5651,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "filter_intelligence_studio"
+   ],
+   "errors": [],
+   "answer_head": "I have filtered the Intelligence Studio to show the verifications that still need evidence"
+  },
+  {
+   "label": "A",
+   "i": 4,
+   "ok": true,
+   "effect": true,
+   "ms": 5814,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "filter_intelligence_studio"
+   ],
+   "errors": [],
+   "answer_head": "Showing the verification tasks that currently need evidence (such as `task_demo_bosch_040`"
+  },
+  {
+   "label": "C",
+   "i": 0,
+   "ok": true,
+   "effect": true,
+   "ms": 4649,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "explain_financial_provenance"
+   ],
+   "errors": [],
+   "answer_head": "I have separated the verifications funded by real PayPal Sandbox capture from the syntheti"
+  },
+  {
+   "label": "C",
+   "i": 1,
+   "ok": true,
+   "effect": true,
+   "ms": 5258,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "explain_financial_provenance"
+   ],
+   "errors": [],
+   "answer_head": "I have filtered the Intelligence Studio to highlight verifications funded by a **REAL_SAND"
+  },
+  {
+   "label": "C",
+   "i": 2,
+   "ok": true,
+   "effect": true,
+   "ms": 4859,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "explain_financial_provenance"
+   ],
+   "errors": [],
+   "answer_head": "I have highlighted the strict financial provenance separation between verifications funded"
+  },
+  {
+   "label": "C",
+   "i": 3,
+   "ok": true,
+   "effect": true,
+   "ms": 4761,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "explain_financial_provenance"
+   ],
+   "errors": [],
+   "answer_head": "I have filtered the Intelligence Studio to isolate verifications funded by **REAL_SANDBOX_"
+  },
+  {
+   "label": "C",
+   "i": 4,
+   "ok": true,
+   "effect": true,
+   "ms": 5079,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "explain_financial_provenance"
+   ],
+   "errors": [],
+   "answer_head": "I have isolated the verification cases funded by a **REAL_SANDBOX_CAPTURE** from the synth"
+  },
+  {
+   "label": "E",
+   "i": 0,
+   "ok": true,
+   "effect": true,
+   "ms": 4961,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "open_verification_case"
+   ],
+   "errors": [],
+   "answer_head": "I have focused the verification case with pending human review (`task_demo_pending_review_"
+  },
+  {
+   "label": "E",
+   "i": 1,
+   "ok": true,
+   "effect": true,
+   "ms": 6111,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "open_verification_case"
+   ],
+   "errors": [],
+   "answer_head": "I have opened and focused verification case `task_demo_pending_review_02` (`[DEMO_SYNTHETI"
+  },
+  {
+   "label": "E",
+   "i": 2,
+   "ok": true,
+   "effect": true,
+   "ms": 6082,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "open_verification_case"
+   ],
+   "errors": [],
+   "answer_head": "I have focused the verification case with pending human review (`task_demo_pending_review_"
+  },
+  {
+   "label": "E",
+   "i": 3,
+   "ok": true,
+   "effect": true,
+   "ms": 5612,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "open_verification_case"
+   ],
+   "errors": [],
+   "answer_head": "I have focused verification case `task_demo_pending_review_02` ([DEMO_SYNTHETIC] Bosch Hig"
+  },
+  {
+   "label": "E",
+   "i": 4,
+   "ok": true,
+   "effect": true,
+   "ms": 6182,
+   "turns_total": 2,
+   "live_turns": 2,
+   "planner_turns": 0,
+   "http_errors": 0,
+   "tools": [
+    "open_verification_case"
+   ],
+   "errors": [],
+   "answer_head": "I have focused the verification case with pending human review (`task_demo_pending_review_"
+  },
+  {
+   "label": "FREEFORM",
+   "i": 0,
+   "ok": true,
+   "effect": true,
+   "ms": 84845,
+   "turns_total": 9,
+   "live_turns": 8,
+   "planner_turns": 1,
+   "http_errors": 0,
+   "tools": [
+    "delegate_to",
+    "add_widget",
+    "view_page",
+    "position_widget",
+    "complete_task",
+    "delegate_to",
+    "complete_task"
+   ],
+   "errors": [
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): Empty response from gemini-3.5-flash-lite"
+   ],
+   "answer_head": "I have successfully added a new pie chart widget (`@widget[pie_chart_widget]`) showing `ve"
+  },
+  {
+   "label": "FREEFORM",
+   "i": 1,
+   "ok": true,
+   "effect": true,
+   "ms": 64646,
+   "turns_total": 10,
+   "live_turns": 9,
+   "planner_turns": 1,
+   "http_errors": 0,
+   "tools": [
+    "delegate_to",
+    "add_widget",
+    "view_page",
+    "position_widget",
+    "complete_task",
+    "delegate_to",
+    "complete_task",
+    "update_plan"
+   ],
+   "errors": [
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): Empty response from gemini-3.5-flash-lite"
+   ],
+   "answer_head": "I have successfully added a new pie chart widget (`@widget[pie_chart_widget]`) to the dash"
+  },
+  {
+   "label": "FREEFORM",
+   "i": 2,
+   "ok": false,
+   "effect": true,
+   "ms": 92142,
+   "turns_total": 14,
+   "live_turns": 11,
+   "planner_turns": 3,
+   "http_errors": 0,
+   "tools": [
+    "delegate_to",
+    "add_widget",
+    "view_page",
+    "position_widget",
+    "position_widget",
+    "position_widget",
+    "delegate_to",
+    "complete_task",
+    "view_page",
+    "update_plan",
+    "delegate_to"
+   ],
+   "errors": [
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): {\"error\":{\"code\":503,\"message\":\"This model i",
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): {\"error\":{\"code\":503,\"message\":\"This model i",
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): Empty response from gemini-3.5-flash-lite"
+   ],
+   "answer_head": "Error: Agent run timed out"
+  },
+  {
+   "label": "FREEFORM",
+   "i": 3,
+   "ok": true,
+   "effect": true,
+   "ms": 42995,
+   "turns_total": 10,
+   "live_turns": 9,
+   "planner_turns": 1,
+   "http_errors": 0,
+   "tools": [
+    "delegate_to",
+    "add_widget",
+    "view_page",
+    "position_widget",
+    "view_page",
+    "complete_task",
+    "delegate_to",
+    "complete_task"
+   ],
+   "errors": [
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): Empty response from gemini-3.5-flash-lite"
+   ],
+   "answer_head": "I have added a new pie chart widget (ID `@widget[new_pie_chart]`) to the evidence intellig"
+  },
+  {
+   "label": "FREEFORM",
+   "i": 4,
+   "ok": true,
+   "effect": true,
+   "ms": 56297,
+   "turns_total": 12,
+   "live_turns": 11,
+   "planner_turns": 1,
+   "http_errors": 0,
+   "tools": [
+    "delegate_to",
+    "add_widget",
+    "view_page",
+    "position_widget",
+    "position_widget",
+    "position_widget",
+    "view_page",
+    "position_widget",
+    "delegate_to",
+    "complete_task"
+   ],
+   "errors": [
+    "GEMINI_TEMPORARY_ERROR: All Studio agent models failed (gemini-3.5-flash-lite, gemini-3.8-flash, gemini-3.5-flash): Empty response from gemini-3.5-flash-lite"
+   ],
+   "answer_head": "I have successfully added a new pie chart widget to your dashboard, displaying the `verifi"
+  }
+ ]
+}

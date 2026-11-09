@@ -1,0 +1,86 @@
+# demo   : read-only public demo, no secrets required   -> docker compose up --build
+# full   : complete local workflow with a persistent volume -> docker compose --profile full up --build
+# caddy  : HTTPS in front of demo, needs SITE_ADDRESS   -> docker compose --profile https up -d --build
+# Values come from a local .env file (see .env.example). PayPal credentials are never given to demo.
+x-hardening: &hardening
+  restart: unless-stopped
+  read_only: true
+  tmpfs:
+    - /tmp
+  cap_drop:
+    - ALL
+  security_opt:
+    - no-new-privileges:true
+  mem_limit: 1g
+
+services:
+  demo:
+    <<: *hardening
+    build:
+      context: .
+      args:
+        VITE_AG_STUDIO_LICENSE_KEY: ${VITE_AG_STUDIO_LICENSE_KEY:-}
+    image: realityproof:local
+    environment:
+      PUBLIC_DEMO_MODE: "true"
+      MASK_THIRD_PARTY_BRANDS: "true"
+      TRUST_PROXY: "${TRUST_PROXY:-false}"
+      AUTH_TOKEN_SECRET: ${DEMO_AUTH_TOKEN_SECRET:-}
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:8080}
+      PUBLIC_API_BASE_URL: ${WEB_ORIGIN:-http://localhost:8080}
+      GEMINI_API_KEY: ${DEMO_GEMINI_API_KEY:-}
+      STUDIO_AGENT_DAILY_TURN_LIMIT: ${STUDIO_AGENT_DAILY_TURN_LIMIT:-300}
+    ports:
+      - "127.0.0.1:8080:4000"
+
+  full:
+    <<: *hardening
+    profiles: ["full"]
+    build:
+      context: .
+      args:
+        VITE_AG_STUDIO_LICENSE_KEY: ${VITE_AG_STUDIO_LICENSE_KEY:-}
+    image: realityproof:local
+    environment:
+      # Development mode: the role tokens are the published local ones. Never expose this service.
+      NODE_ENV: development
+      PUBLIC_DEMO_MODE: "false"
+      MASK_THIRD_PARTY_BRANDS: "true"
+      WEB_ORIGIN: http://localhost:8081
+      PUBLIC_API_BASE_URL: http://localhost:8081
+      AUTH_TOKEN_SECRET: ${AUTH_TOKEN_SECRET:-dev-only-change-me-in-production-32-chars-min}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.5-flash-lite}
+      GEMINI_FALLBACK_MODEL: ${GEMINI_FALLBACK_MODEL:-gemini-3.8-flash}
+      PAYPAL_MODE: sandbox
+      PAYPAL_CLIENT_ID: ${PAYPAL_CLIENT_ID:-}
+      PAYPAL_CLIENT_SECRET: ${PAYPAL_CLIENT_SECRET:-}
+      PAYPAL_WEBHOOK_ID: ${PAYPAL_WEBHOOK_ID:-}
+    ports:
+      - "127.0.0.1:8081:4000"
+    volumes:
+      - realityproof_data:/data
+
+  caddy:
+    profiles: ["https"]
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-localhost}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      demo:
+        condition: service_healthy
+
+volumes:
+  # Holds the only copy of workflow state and evidence: "down -v" deletes it. Back up first.
+  realityproof_data:
+  caddy_data:
+  caddy_config:

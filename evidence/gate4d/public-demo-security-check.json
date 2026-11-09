@@ -1,0 +1,258 @@
+{
+  "executed_at": "2026-11-05T18:22:28.207Z",
+  "target": "http://localhost:8080",
+  "passed": 50,
+  "total": 50,
+  "results": [
+    {
+      "name": "the target is in public demo mode",
+      "ok": true,
+      "detail": "{\"status\":\"ready\",\"tasks_loaded\":3,\"public_demo_mode\":true}"
+    },
+    {
+      "name": "POST /api/v1/verification-requests is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/funding/create-order is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/funding/capture-order is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/funding/simulate-demo-funding is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/funding/replay-historical-sandbox is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/funding/reuse-verified-sandbox is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/assign is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/evidence is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/analyze is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST <task>/review is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "POST /api/v1/webhooks/paypal is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST /api/v1/verification-requests/task_live_sbx_1793222660264/re has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST //api/v1/verification-requests/task_live_sbx_1793222660264/r has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST /api/v1/economics/voi/../../v1/verification-requests/task_li has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST /api/v1/ai/studio-agent-turn/../../verification-requests/tas has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST /api/v1/verification-requests/task_live_sbx_1793222660264/RE has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass POST /api/v1/verification-requests/task_live_sbx_1793222660264/re has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass GET /api/v1/verification-requests/task_live_sbx_1793222660264/re has no effect",
+      "ok": true,
+      "detail": "404"
+    },
+    {
+      "name": "bypass PUT /api/v1/verification-requests/task_live_sbx_1793222660264/re has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass PATCH /api/v1/verification-requests/task_live_sbx_1793222660264 has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "bypass DELETE /api/v1/verification-requests/task_live_sbx_1793222660264 has no effect",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "the read that would call PayPal is refused",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "the historical record still shows one capture, not doubled",
+      "ok": true,
+      "detail": "{\"count\":1,\"usd\":14}"
+    },
+    {
+      "name": "the UNCLAIMED payout is not counted as received",
+      "ok": true,
+      "detail": "{\"received\":0,\"unclaimed\":11.2}"
+    },
+    {
+      "name": "reads need a token",
+      "ok": true,
+      "detail": "401"
+    },
+    {
+      "name": "a forged token is refused",
+      "ok": true,
+      "detail": "401"
+    },
+    {
+      "name": "a role header is refused",
+      "ok": true,
+      "detail": "400"
+    },
+    {
+      "name": "a role query parameter is refused",
+      "ok": true,
+      "detail": "400"
+    },
+    {
+      "name": "the verifier cannot read the audit log",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "name": "the external agent sees none of the requester's tasks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "the external agent cannot read a task by id",
+      "ok": true,
+      "detail": "404"
+    },
+    {
+      "name": "evidence images need authorization",
+      "ok": true,
+      "detail": "401"
+    },
+    {
+      "name": "a forged signed link is refused",
+      "ok": true,
+      "detail": "401"
+    },
+    {
+      "name": "no file behind /.env",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /..%2f..%2f..%2f.env",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /%2e%2e/%2e%2e/%2e%2e/etc/passwd",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /data/private-evidence/realityproof-state.js",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /private-evidence/realityproof-state.json",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /evidence/live-e2e-gate1-2-completed.json",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /apps/api/dist/server.js",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "no file behind /package.json",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "responses hold no email address",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "responses hold no payer identifier",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "responses hold no PayPal or Gemini credential",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "the browser bundle holds no Google or PayPal key",
+      "ok": true,
+      "detail": "7462612 bytes"
+    },
+    {
+      "name": "server errors reveal no internals",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "security headers are present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "the agent refuses a payout and strips payment tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "agent bursts hit the rate limit",
+      "ok": true,
+      "detail": "11/40 limited"
+    }
+  ]
+}
