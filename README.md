@@ -12,6 +12,8 @@
 
 **RealityProof lets a buyer, or an AI agent buying on someone's behalf, pay for evidence before paying for a part.** A verifier photographs the actual item, Gemini reports what it can and can't see, a human makes the decision, and a Proof Passport records what was checked and what remains unproven.
 
+**▶ Live demo: <https://23-22-184-205.sslip.io>** — read-only, no sign-in, synthetic data plus one real PayPal Sandbox record. This public edition leaves out the AG Studio dashboard; hackathon judges get the full edition (AG Studio and the live Gemini agent) through the submission's testing instructions. Available until December 15, 2026.
+
 > **Prototype for the PayPal AI Hackathon 2026.** All money is PayPal Sandbox test money. Every image is a labelled synthetic fixture of a fictional part, and no physical inspection has taken place. A matching label or an intact hash does not prove a product is genuine.
 
 ## Contents
@@ -209,7 +211,7 @@ Coming soon: the public YouTube link will be added here.
 
 The code in this repository is released under the [MIT License](LICENSE).
 
-**AG Studio, AG Grid Enterprise and AG Charts Enterprise are commercial products of AG Grid Ltd** and are not covered by that license. They are npm dependencies, not included in this repository, and no licence key is included. Without a key they run with a watermark for local evaluation; public or production use needs a licence or AG Grid's permission. See [NOTICE.md](NOTICE.md).
+**AG Studio, AG Grid Enterprise and AG Charts Enterprise are commercial products of AG Grid Ltd** and are not covered by that license. They are npm dependencies, not included in this repository, and no licence key is included. Without a key they run with a watermark for local evaluation; public or production use needs a licence or AG Grid's permission. AG Grid provides the licence for PayPal AI Hackathon judging, so the hosted public edition is built without AG Studio (`REALITYPROOF_WEB_EDITION=public`, see [the runbook](DEPLOYMENT_RUNBOOK.md)) and the full edition is shown to judges only. See [NOTICE.md](NOTICE.md).
 
 PayPal, Google Gemini, AG Grid, AG Studio and AWS are trademarks of their owners; this project is not endorsed by them. FictoParts is a fictional brand.
 

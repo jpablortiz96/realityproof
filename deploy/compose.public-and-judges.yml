@@ -1,0 +1,45 @@
+# Public demo for everyone + full demo for judges, on one host.
+#   docker compose -f docker-compose.yml -f deploy/compose.public-and-judges.yml --profile https up -d --build
+# - demo-public: web app built WITHOUT AG Studio, no Gemini key, PUBLIC_DEMO_MODE. Anyone can open it.
+# - demo: the full edition (AG Studio + Gemini agent, daily limits), served only to browsers holding the
+#   judges' cookie, set once by https://<site>/__preview/<PREVIEW_TOKEN>.
+# Needs PREVIEW_TOKEN in .env. To go back to the private preview, start with deploy/compose.private-preview.yml.
+services:
+  demo-public:
+    build:
+      context: .
+      args:
+        REALITYPROOF_WEB_EDITION: public
+    image: realityproof:public
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1g
+    environment:
+      PUBLIC_DEMO_MODE: "true"
+      MASK_THIRD_PARTY_BRANDS: "true"
+      TRUST_PROXY: "${TRUST_PROXY:-false}"
+      AUTH_TOKEN_SECRET: ${DEMO_AUTH_TOKEN_SECRET:-}
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:8080}
+      PUBLIC_API_BASE_URL: ${WEB_ORIGIN:-http://localhost:8080}
+      # No Gemini key: public visitors can't spend Gemini quota. The agent endpoint answers with the
+      # labelled deterministic planner, and photo analysis is refused in public demo mode anyway.
+      GEMINI_API_KEY: ""
+    expose:
+      - "4000"
+
+  caddy:
+    environment:
+      PREVIEW_TOKEN: ${PREVIEW_TOKEN:?set PREVIEW_TOKEN}
+    volumes:
+      - ./deploy/Caddyfile.public-and-judges:/etc/caddy/Caddyfile:ro
+    depends_on:
+      demo:
+        condition: service_healthy
+      demo-public:
+        condition: service_healthy

@@ -19,6 +19,9 @@ COPY apps ./apps
 ENV NODE_OPTIONS=--max-old-space-size=3072
 ARG VITE_AG_STUDIO_LICENSE_KEY=""
 ENV VITE_AG_STUDIO_LICENSE_KEY=$VITE_AG_STUDIO_LICENSE_KEY
+# "public" leaves AG Studio out of the web bundle (see apps/web/vite.config.ts).
+ARG REALITYPROOF_WEB_EDITION="full"
+ENV REALITYPROOF_WEB_EDITION=$REALITYPROOF_WEB_EDITION
 RUN pnpm build
 
 # Production dependencies of the API only: the web app ships as its built bundle.

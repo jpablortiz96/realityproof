@@ -105,6 +105,15 @@ These are the steps used for the 2026-11-09 deployment. Lightsail's Ubuntu and D
    sudo docker compose --profile https up -d --build
    ```
    HTTP basic auth can't be used for this, because the app sends its role tokens in the `Authorization` header.
+
+   **Current mode (since 2026-11-11): public edition for everyone, full edition for judges.** AG Grid provides the AG Studio licence for PayPal AI Hackathon judging, which doesn't clearly cover an open public demo. So:
+   - `demo-public` is built with `REALITYPROOF_WEB_EDITION=public`: the web bundle contains no AG Studio, AG Grid or AG Charts code, and the container has no Gemini key. Anyone can open the site.
+   - `demo` (full edition, AG Studio and the Gemini agent with daily limits) is served only to browsers holding the judges' cookie from `https://<host>/__preview/<PREVIEW_TOKEN>`.
+   ```bash
+   sudo docker compose -f docker-compose.yml -f deploy/compose.public-and-judges.yml --profile https build demo-public
+   sudo docker compose -f docker-compose.yml -f deploy/compose.public-and-judges.yml --profile https up -d
+   ```
+   Roll back to the private preview with `sudo docker compose -f docker-compose.yml -f deploy/compose.private-preview.yml --profile https up -d` and then `sudo docker rm -f realityproof-demo-public-1`. The server also keeps `realityproof:rollback-20261111` (the full image before this change) and `~/backups/config-before-public-*.tar.gz`.
    To avoid building on the server: run `docker compose build demo` on your own machine, then `docker save realityproof:local | gzip > rp.tar.gz`, copy the file to the instance, load it with `gunzip -c rp.tar.gz | docker load`, and start with `docker compose --profile https up -d` (without `--build`).
 7. Check it from another network, in a private window:
    ```bash

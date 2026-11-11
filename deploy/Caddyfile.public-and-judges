@@ -1,0 +1,31 @@
+# Everyone gets the public edition (no AG Studio). Browsers holding the judges' cookie get the full
+# edition. Opening https://<site>/__preview/<PREVIEW_TOKEN> once sets that cookie for 30 days, and
+# opening it again renews it. The app sends "Authorization: Bearer" role tokens, so cookies are used
+# for routing instead of HTTP basic auth.
+{$SITE_ADDRESS} {
+	encode zstd gzip
+	header Strict-Transport-Security "max-age=31536000"
+	request_body {
+		max_size 2MB
+	}
+
+	@unlock path /__preview/{$PREVIEW_TOKEN}
+	handle @unlock {
+		header Set-Cookie "rp_preview={$PREVIEW_TOKEN}; Path=/; Max-Age=2592000; Secure; HttpOnly; SameSite=Lax"
+		header Cache-Control "no-store"
+		redir * / 302
+	}
+
+	@judges header_regexp judges Cookie (^|;\s*)rp_preview={$PREVIEW_TOKEN}(;|$)
+	handle @judges {
+		header X-RealityProof-Edition "full"
+		header Vary Cookie
+		reverse_proxy demo:4000
+	}
+
+	handle {
+		header X-RealityProof-Edition "public"
+		header Vary Cookie
+		reverse_proxy demo-public:4000
+	}
+}
